@@ -1,0 +1,41 @@
+ALGORITHM equal_numbers
+VAR
+    set1,set2: ARRAY OF INTEGER[20];
+    sum: INTEGER := 0;
+    i,j,n,k:INTEGER;
+    equal: BOOLEAN:=false;
+
+BEGIN
+    Read (n);
+    Read (k);
+        For i FROM 0 TO n-1 Step 1 DO 
+            Read set1[i]
+        END_FOR
+
+        For j FROM 0 TO k-1 Step 1 DO 
+            Read set2[j]
+        END_FOR
+
+        
+        FOR i FROM 0 TO n-1 STEP 1  DO
+            j:=0;
+            equal:=false;
+            WHILE (j< k) DO
+                IF (set1[i]=set2[j]) 
+                THEN
+                equal:= true ; 
+                BREAK ; 
+                END_IF 
+              j:= j + 1 ;  
+
+     
+            END_WHILE   
+
+                IF (equal:=true) 
+                  THEN
+                  sum:= sum + set1[i] ;
+                 END_IF
+         END_FOR
+
+                write("sum:= ", sum);  
+END
