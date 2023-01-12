@@ -1,0 +1,30 @@
+ALGORITHM add_distinct
+
+VAR
+ hash : HASH_TABLE<INTEGER,INTEGER> 
+ n,i,j : INTEGER:= 0 ;
+ tab : ARRAY_OF INTEGER[50];
+ add,sum:INTEGER:= 0 ;
+
+BEGIN
+    read(n);
+    tab[i]= n; 
+     i:= i + 1 ;
+     
+    add:= 0 ;
+    IF (hash.lookup(n) = TRUE) THEN
+    add := hash.get(n);
+    hash.insert(n,add+1);
+    ELSE
+           hash.insert(n,1);
+    END_IF
+
+    FOR j FROM 0 TO i STEP 1  DO
+        IF (hash.get(tab[j])=1) THEN
+            sum:= sum + tab[j];
+        END_IF
+    END_FOR
+
+    write("sum:= ", sum);
+
+END
