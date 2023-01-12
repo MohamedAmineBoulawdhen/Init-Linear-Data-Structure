@@ -1,0 +1,58 @@
+ALGORITHM add_distinct
+VAR 
+set1,set2: ARRAY [20] OF INTIGER;
+i,j: INTIGER;
+sum: INTIGER := 0;
+TEST: BOOLEAN := TRUE;
+
+BEGIN
+
+    REPEAT
+       FOR i FROM 0 to 19 STEP 1 DO 
+           WRITE ('write your first set of elements(max 20)');
+           READ (set1[i]);
+       END FOR
+
+       FOR j FROM 0 to 19 STEP 1 DO
+           WRITE ('write you second set of elements(max 20)');
+           READ (set2);
+       END FOR
+    UNTIL (set1<>[''] AND set2<>['']);
+
+    
+
+    FOR i FROM 0 TO 19 STEP 1 DO 
+        FOR j FROM 0 TO 19 STEP 1 DO 
+            IF set1[i]<>set2[j]
+               CONTINUE;
+            ELSE
+               TEST=FALSE;
+               BREAK;
+            END IF;
+        END FOR;
+       IF TEST=TRUE
+            sum:=sum+set1[i];
+       ELSE        
+                   TEST=TRUE;
+       END IF;
+     END FOR; 
+
+    FOR i FROM 0 TO 19 STEP 1 DO 
+        FOR j FROM 0 TO 19 STEP 1 DO 
+            IF set2[i]<>set1[j]
+               CONTINUE;
+            ELSE
+               TEST=FALSE;
+               BREAK;
+            END IF;
+        END FOR;
+       IF TEST=TRUE
+            sum:=sum+set2[i];
+       ELSE        
+                   TEST=TRUE;
+       END IF;
+     END FOR; 
+    
+
+    WRITE ('The sum of the distinct numbers is =', sum);          
+END
