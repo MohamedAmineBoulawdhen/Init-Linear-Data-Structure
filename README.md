@@ -1,5 +1,4 @@
-# Summing Distinct Elements in Sets
-
+# Problem 1 - Summing Distinct Elements in Sets
 ## Problem Statement
 Given two sets of elements, find the sum of all distinct elements from the set. In other words, find the sum of all elements which are present in either of the given set.
 
@@ -17,7 +16,7 @@ Output: 13 (distinct elements 4, 7, 2 )
 - Insert all the elements from both the sets with the element as key and its count (in both arrays).
 - Iterate through the constructed map and sum all the elements with count = 1.
 
-## Problem 2 - Summing Overlapping Elements in Sets
+# Problem 2 - Summing Overlapping Elements in Sets
 Given two sets of integers, write algorithms to print the sum of overlapping elements in two sets. The elements in each set are unique or there are no duplicates within a set.
 
 ## Example
