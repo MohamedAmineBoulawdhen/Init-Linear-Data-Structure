@@ -35,6 +35,4 @@ Explanation: Common elements are 10, 13
 - Insert all the elements from both the sets with the element as key and its count (in both arrays).
 - Iterate through the constructed map and sum all the elements with count > 1.
 
----
-I hope this repository was helpful and provided you with a deeper understanding of finding the sum of distinct and overlapping elements in two sets. 
-Don't hesitate to leave a star ⭐️ if you found it useful!
+
